@@ -22,6 +22,10 @@
 // SOFTWARE.
 //
 
+#if canImport(Foundation)
+import Foundation
+#endif
+
 open class Permission: NSObject {
     public typealias Callback = (PermissionStatus) -> Void
 

@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Permission",
     platforms: [
-        .iOS(.v9),
+        .iOS(.v10),
     ],
     products: [
         .library(
@@ -69,7 +69,11 @@ let package = Package(
         .target(
             name: "Permission",
             dependencies: [],
-            path: "Source/Core"
+            path: "Source",
+            sources: [
+                "Supporting Files/Utilities.swift",
+                "Core"
+            ]
         ),
         .target(
             name: "Permission/Bluetooth",
